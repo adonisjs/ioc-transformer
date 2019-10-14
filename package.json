@@ -1,0 +1,73 @@
+{
+  "name": "@adonisjs/ioc-transformer",
+  "version": "0.0.0",
+  "description": "Typescript transformer to transform import statements to IoC container use calls",
+  "scripts": {
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "pretest": "npm run lint",
+    "test": "node japaFile.js",
+    "prepublishOnly": "npm run build",
+    "lint": "tslint --project tsconfig.json",
+    "clean": "del build",
+    "compile": "npm run lint && npm run clean && tsc",
+    "build": "npm run compile",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adonisjs/ioc-transformer.git"
+  },
+  "keywords": [
+    "ioc",
+    "adonisjs",
+    "typescript",
+    "ts-plugin"
+  ],
+  "author": "virk,adonisjs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adonisjs/ioc-transformer/issues"
+  },
+  "homepage": "https://github.com/adonisjs/ioc-transformer#readme",
+  "devDependencies": {
+    "@adonisjs/mrm-preset": "^2.1.0",
+    "@types/node": "^12.7.12",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "del-cli": "^3.0.0",
+    "doctoc": "^1.4.0",
+    "husky": "^3.0.9",
+    "japa": "^3.0.1",
+    "mrm": "^1.2.2",
+    "pkg-ok": "^2.3.1",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.6.4"
+  },
+  "nyc": {
+    "exclude": [
+      "test"
+    ],
+    "extension": [
+      ".ts"
+    ]
+  },
+  "main": "build/index.js",
+  "files": [
+    "build/src",
+    "build/index.d.ts",
+    "build/index.js"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "doctoc README.md --title='## Table of contents' && git add README.md",
+      "commit-msg": "node ./node_modules/@adonisjs/mrm-preset/validateCommit/conventional/validate.js"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
