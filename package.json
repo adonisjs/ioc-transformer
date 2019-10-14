@@ -12,12 +12,13 @@
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
     "test": "node japaFile.js",
-    "prepublishOnly": "npm run build",
     "lint": "tslint --project tsconfig.json",
     "clean": "del build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "np",
+    "version": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,7 @@
     "husky": "^3.0.9",
     "japa": "^3.0.1",
     "mrm": "^1.2.2",
-    "pkg-ok": "^2.3.1",
+    "np": "^5.1.1",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "tslint-eslint-rules": "^5.4.0",
@@ -70,5 +71,9 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "np": {
+    "contents": ".",
+    "anyBranch": false
   }
 }
