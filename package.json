@@ -75,5 +75,11 @@
   "np": {
     "contents": ".",
     "anyBranch": false
+  },
+  "peerDependencies": {
+    "@adonisjs/application": "^1.x.x"
+  },
+  "dependencies": {
+    "@adonisjs/fold": "^6.2.2"
   }
 }
