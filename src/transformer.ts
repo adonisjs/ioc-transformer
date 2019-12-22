@@ -28,16 +28,16 @@ export function iocTransformer (ts: typeof tsStatic, rcFile: RcFile) {
         ) {
           const moduleName = (node.arguments[0] as tsStatic.StringLiteral).text
           if (moduleName && moduleName.startsWith('@ioc:')) {
-            return ts.createCall(ts.createIdentifier(
-              `global[Symbol.for('ioc.use')]`),
+            return ts.createCall(
+              ts.createIdentifier('global[Symbol.for(\'ioc.use\')]'),
               undefined,
               [ts.createStringLiteral(moduleName.substr(5))],
             )
           }
 
           if (moduleName && aliases.find((alias) => moduleName.startsWith(`${alias}/`))) {
-            return ts.createCall(ts.createIdentifier(
-              `global[Symbol.for('ioc.use')]`),
+            return ts.createCall(
+              ts.createIdentifier('global[Symbol.for(\'ioc.use\')]'),
               undefined,
               [ts.createStringLiteral(moduleName)],
             )
