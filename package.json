@@ -79,7 +79,5 @@
   "peerDependencies": {
     "@adonisjs/application": "^1.x.x"
   },
-  "dependencies": {
-    "@adonisjs/fold": "^6.2.3"
-  }
+  "dependencies": {}
 }
