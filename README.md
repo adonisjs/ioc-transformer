@@ -1,3 +1,5 @@
+<div align="center"><img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1564392111/adonis-banner_o9lunk.png" width="600px"></div>
+
 # Ioc Transformer
 > Typescript transformer to transform import statements to IoC container use calls
 
@@ -10,8 +12,6 @@ The [Ioc container](https://github.com/adonisjs/fold) of AdonisJs exposes the `u
 ## Table of contents
 
 - [Usage](#usage)
-- [Maintainers](#maintainers)
-- [Authors & License](#authors--license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -34,18 +34,11 @@ require('ts-node').register({
 })
 ```
 
-## Maintainers
-[Harminder virk](https://github.com/thetutlage)
-
-## Authors & License
-[Harminder virk](https://github.com/Harminder virk) and [contributors](https://github.com/adonisjs/ioc-transformer/graphs/contributors).
-
-MIT License, see the included [MIT](LICENSE.md) file.
+[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+[typescript-url]:  "typescript"
 
 [npm-image]: https://img.shields.io/npm/v/@adonisjs/ioc-transformer.svg?style=for-the-badge&logo=npm
 [npm-url]: https://npmjs.org/package/@adonisjs/ioc-transformer "npm"
 
-[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
-
-[license-url]: LICENSE.md
-[license-image]: https://img.shields.io/aur/license/pac.svg?style=for-the-badge
+[license-image]: https://img.shields.io/npm/l/@adonisjs/ioc-transformer?color=blueviolet&style=for-the-badge
+[license-url]: LICENSE.md "license"
