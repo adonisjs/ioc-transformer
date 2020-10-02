@@ -78,5 +78,9 @@
   "peerDependencies": {
     "@adonisjs/application": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  }
 }
