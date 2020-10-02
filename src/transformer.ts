@@ -15,7 +15,7 @@ import { RcFile } from '@ioc:Adonis/Core/Application'
  * in compiled Javascript code.
  */
 export function iocTransformer (ts: typeof tsStatic, rcFile: RcFile) {
-  const aliases = Object.keys(rcFile.aliases)
+  const aliases = Object.keys(rcFile.aliases || {})
 
   return (ctx: tsStatic.TransformationContext) => {
     return (sourceFile: tsStatic.SourceFile) => {
