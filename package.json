@@ -36,8 +36,6 @@
   },
   "homepage": "https://github.com/adonisjs/ioc-transformer#readme",
   "devDependencies": {
-    "@adonisjs/application": "^3.0.10",
-    "@adonisjs/fold": "^7.0.4",
     "@adonisjs/mrm-preset": "^2.4.0",
     "@types/node": "^14.11.2",
     "commitizen": "^4.2.1",
@@ -74,9 +72,6 @@
   "np": {
     "contents": ".",
     "anyBranch": false
-  },
-  "peerDependencies": {
-    "@adonisjs/application": "^3.0.0"
   },
   "dependencies": {},
   "publishConfig": {

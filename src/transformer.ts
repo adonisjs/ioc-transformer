@@ -8,13 +8,12 @@
 */
 
 import * as tsStatic from 'typescript'
-import { RcFile } from '@ioc:Adonis/Core/Application'
 
 /**
  * Converts Ioc container import statements to `use` statements
  * in compiled Javascript code.
  */
-export function iocTransformer (ts: typeof tsStatic, rcFile: RcFile) {
+export function iocTransformer (ts: typeof tsStatic, rcFile: { aliases: { [key: string]: string } }) {
   const aliases = Object.keys(rcFile.aliases || {})
 
   return (ctx: tsStatic.TransformationContext) => {
