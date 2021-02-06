@@ -7,7 +7,7 @@
 * file that was distributed with this source code.
 */
 
-import * as tsStatic from 'typescript'
+import tsStatic from 'typescript'
 
 /**
  * Converts Ioc container import statements to `use` statements
@@ -27,18 +27,18 @@ export function iocTransformer (ts: typeof tsStatic, rcFile: { aliases: { [key: 
         ) {
           const moduleName = (node.arguments[0] as tsStatic.StringLiteral).text
           if (moduleName && moduleName.startsWith('@ioc:')) {
-            return ts.createCall(
-              ts.createIdentifier('global[Symbol.for(\'ioc.use\')]'),
+            return ts.factory.createCallExpression(
+              ts.factory.createIdentifier('global[Symbol.for(\'ioc.use\')]'),
               undefined,
-              [ts.createStringLiteral(moduleName.substr(5))],
+              [ts.factory.createStringLiteral(moduleName.substr(5))],
             )
           }
 
           if (moduleName && aliases.find((alias) => moduleName.startsWith(`${alias}/`))) {
-            return ts.createCall(
-              ts.createIdentifier('global[Symbol.for(\'ioc.use\')]'),
+            return ts.factory.createCallExpression(
+              ts.factory.createIdentifier('global[Symbol.for(\'ioc.use\')]'),
               undefined,
-              [ts.createStringLiteral(moduleName)],
+              [ts.factory.createStringLiteral(moduleName)],
             )
           }
         }
