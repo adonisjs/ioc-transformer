@@ -71,7 +71,8 @@
   },
   "np": {
     "contents": ".",
-    "anyBranch": false
+    "anyBranch": false,
+    "tests": false
   },
   "dependencies": {},
   "publishConfig": {
