@@ -1,9 +1,10 @@
 {
   "core": true,
-  "ts": true,
   "license": "MIT",
   "services": [
-    "circleci"
+    "github-actions"
   ],
-  "minNodeVersion": "10.15.3"
+  "minNodeVersion": "14.17.0",
+  "probotApps": [],
+  "runGhActionsOnWindows": false
 }
