@@ -3,7 +3,7 @@
 # Ioc Transformer
 > Typescript transformer to transform import statements to IoC container use calls
 
-[![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
+[![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
 
 The [Ioc container](https://github.com/adonisjs/fold) of AdonisJs exposes the `use` method to resolve dependencies from the container. However, using `use` and `import` statements together feels a bit cluttered. This module enables using `import` statements for IoC container bindings and transforms them to the `use` call by hooking into the Typescript compiler lifecycle.
 
@@ -33,6 +33,9 @@ require('ts-node').register({
   }
 })
 ```
+
+[gh-workflow-image]: https://img.shields.io/github/workflow/status/adonisjs/ioc-transformer/test?style=for-the-badge
+[gh-workflow-url]: https://github.com/adonisjs/ioc-transformer/actions/workflows/test.yml "Github action"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [typescript-url]:  "typescript"
