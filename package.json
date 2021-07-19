@@ -1,6 +1,6 @@
 {
   "name": "@adonisjs/ioc-transformer",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Typescript transformer to transform import statements to IoC container use calls",
   "main": "build/index.js",
   "files": [
